@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <SignAssembly>False</SignAssembly>
+    <Title>Zustandf</Title>
+    <Version>0.0.0-rc</Version>
+    <Authors>Falcion</Authors>
+    <Description>TO-DO</Description>
+    <Copyright>MIT License</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/Falcion/Zustandfundamentalen</RepositoryUrl>
+    <PackageTags>TO-DO</PackageTags>
+    <IncludeSymbols>True</IncludeSymbols>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Configurations>Debug;Release</Configurations>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath>/</PackagePath>
+    </None>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>/</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Page Include="README">
+      <Pack>True</Pack>
+      <PackagePath>/</PackagePath>
+    </Page>
+    <None Include="INSTR.TXT">
+        <Pack>True</Pack>
+        <PackagePath>/</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Arrays\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EditorConfigFiles Update="C:\Users\falci\Downloads\Zustandfundamentalen\.editorconfig">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EditorConfigFiles>
+  </ItemGroup>
+</Project>

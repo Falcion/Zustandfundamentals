@@ -1,0 +1,7 @@
+# Ignore Visual Studio Solution file (only on local files)
+#*.sln
+
+[bB]in/**/*
+[oO]bj/**/*
+
+.vs/
