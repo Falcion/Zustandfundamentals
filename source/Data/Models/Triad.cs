@@ -231,7 +231,7 @@ public class Triad<T> : IEquatable<Triad<T>>, IEqualityComparer<Triad<T>>,
                                    Triad<T>? triad2)
     {
         if(ReferenceEquals(triad1,
-                            triad2))
+                           triad2))
             return true;
 
         if(triad1 is null && triad2 is null)

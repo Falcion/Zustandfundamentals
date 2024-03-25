@@ -1284,8 +1284,7 @@ public class Quadra<T1, T2, T3, T4> : IEquatable<Quadra<T1, T2, T3, T4>>, IEqual
     /// Instance constructor for the class
     /// </summary>
     /// <param name="triad">
-    /// An instance of <see cref="Triad{T1, T2, T3}"/> which contains generic
-    /// type {<typeparamref name="T1"/>, <typeparamref name="T2"/>, <typeparamref name="T3"/>, <typeparamref name="T4"/>} values representing three of parameters in the data type
+    /// An instance of <see cref="Triad{T1, T2, T3}"/> which contains generic {T1, T2, T3} values representing three of parameters in the data type
     /// </param>
     /// <param name="param">
     /// A generic type <typeparamref name="T4"/> value representing one of parameters in the data type

@@ -33,7 +33,7 @@ namespace Zustandf.Data.Models;
 public interface IData
 {
     /// <summary>
-    /// An array of <see cref="object"/> which represents parameters of the instance
+    /// An <see cref="Array"/> of <see cref="object"/> which represents parameters of the instance
     /// </summary>
     public object?[] Params { get; }
 

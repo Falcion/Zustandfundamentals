@@ -154,7 +154,7 @@ public class Pair<T> : IEquatable<Pair<T>>, IEqualityComparer<Pair<T>>,
     }
 
     /// <summary>
-    /// Operator for <see cref="Singleton{T}"/> instance
+    /// Operator for <see cref="Pair{T}"/> instance
     /// </summary>
     /// <param name="value">
     /// An instance of <see cref="Tuple{T1, T2}"/> which represents static tuple with two value
@@ -166,7 +166,7 @@ public class Pair<T> : IEquatable<Pair<T>>, IEqualityComparer<Pair<T>>,
     }
 
     /// <summary>
-    /// Operator for <see cref="Singleton{T}"/> instance
+    /// Operator for <see cref="Pair{T}"/> instance
     /// </summary>
     /// <param name="value">
     /// An instance of <see cref="Tuple{T1, T2}"/> which represents static tuple with two value
