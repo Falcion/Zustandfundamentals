@@ -48,7 +48,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EditorConfigFiles Update="C:\Users\falci\Downloads\Zustandfundamentalen\.editorconfig">
+    <EditorConfigFiles Update="Zustandfundamentalen\.editorconfig">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EditorConfigFiles>
   </ItemGroup>
