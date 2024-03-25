@@ -5,3 +5,7 @@
 [oO]bj/**/*
 
 .vs/
+
+# Ignore Obsidian workspace file (local)
+.obsidian/workspace
+!.obsidian/app.json
