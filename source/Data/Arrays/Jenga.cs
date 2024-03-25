@@ -119,6 +119,11 @@ public class Jenga<T> : ICollection<T>, ICloneable
         Controllers = other.Controllers;
     }
 
+    public Jenga(Threadsafe.Jenga<T> threadsafe)
+    {
+        Controllers = threadsafe.Controllers;
+    }
+
     /// <summary>
     /// Method which pushes given item on top of the stack
     /// </summary>
@@ -766,6 +771,11 @@ public class Jenga<TKey, TValue> : IDictionary<TKey, TValue>, ICloneable where T
     public Jenga(Jenga<TKey, TValue> other)
     {
         Controllers = other.Controllers;
+    }
+
+    public Jenga(Threadsafe.Jenga<TKey, TValue> threadsafe)
+    {
+        Controllers = threadsafe.Controllers;
     }
 
     /// <summary>
