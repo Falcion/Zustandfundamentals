@@ -185,9 +185,13 @@ csharp_style_prefer_top_level_statements = true:silent
 csharp_style_prefer_null_check_over_type_check = true:suggestion
 csharp_style_deconstructed_variable_declaration = true:suggestion
 csharp_style_prefer_local_over_anonymous_function = true:suggestion
-csharp_style_implicit_object_creation_when_type_is_apparent = true:suggestion
+csharp_style_implicit_object_creation_when_type_is_apparent = true:none
+
+# IDE0090
+dotnet_diagnostic.IDE0090.severity = none
 
 # Visual Basic files
+
 [*.vb]
 # Modifier preferences
 visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public,Friend,NotOverridable,Overridable,MustOverride,Overloads,Overrides,MustInherit,NotInheritable,Static,Shared,Shadows,ReadOnly,WriteOnly,Dim,Const,WithEvents,Widening,Narrowing,Custom,Async:suggestion
