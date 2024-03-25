@@ -60,6 +60,3 @@ for container in VERSION_CONTAINERS:
             enter_version(['<Version>', '</Version>'], version)
             
             break
-
-
-

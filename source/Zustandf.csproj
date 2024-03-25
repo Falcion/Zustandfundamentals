@@ -48,11 +48,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\Arrays\" />
-  </ItemGroup>
-  <ItemGroup>
     <EditorConfigFiles Update="C:\Users\falci\Downloads\Zustandfundamentalen\.editorconfig">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EditorConfigFiles>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Arrays\Threadsafe\" />
   </ItemGroup>
 </Project>

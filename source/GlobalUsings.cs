@@ -1,18 +1,18 @@
 ﻿/*
  * MIT License
- * 
+ *
  * Copyright (c) 2023-2024 Falcion
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,35 +20,35 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
- * 
+ *
  * - https://choosealicense.com/licenses/mit
  * - https://spdx.org/licenses/MIT
  */
 
-namespace Zustandf.Data.Models;
+global using global::System;
+global using global::System.Collections;
+global using global::System.Collections.Generic;
+global using global::System.Linq;
+
+global using static Zustandf.CONSTS;
+
+using Zustandf.Data.Models;
+
+namespace Zustandf;
 
 /// <summary>
-/// An interface which represents common behaviour for data containers
+/// Global container for system consts and other static data
 /// </summary>
-public interface IData
+internal static class CONSTS
 {
     /// <summary>
-    /// An array of <see cref="object"/> which represents parameters of the instance
+    /// String parameter of charseq which represents message of <see cref="NotSupportedException"/> in instances of <see cref="IData"/>
     /// </summary>
-    public object?[] Params { get; }
+    public const string EXCEPTION_MESSAGE_DATA_EVEN = "Data instance supports this interaction method only for even-counted parameters instances.";
 
-    /// <summary>
-    /// Method which swaps values in instance of data container in even position terms
-    /// </summary>
-    public void Swap();
+    public const string EXCEPTION_MESSAGE_JENGA_EMPTY = "Empty instance of collection wrapper can't interact with it's data.";
 
-    /// <summary>
-    /// Method which moves values positions between instance's parameters of data container
-    /// </summary>
-    public void Move();
+    public const string EXCEPTION_MESSAGE_JENGA_USE = "An instance of jenga wrapper acts as collection, but not interacts as it, instead use custom provided functionality or analogs of it.";
 
-    /// <summary>
-    /// Method which resets instance's fields to default
-    /// </summary>
-    public void Nullify();
+    public const string EXCEPTION_MESSAGE_JENGA_OUT_OF_RANGE = "Given argument {0} is out of range of collection's instance";
 }
