@@ -97,7 +97,7 @@ public class Jenga<T> : ICollection<T>, ICloneable
     /// Instance constructor for the class
     /// </summary>
     /// <param name="collection">
-    /// An instance of <see cref="ICollection{T}"/> which represents collection from which instance construct its own
+    /// An instance of <see cref="ICollection{T}"/> which represents collection which from instance construct its own
     /// </param>
     public Jenga(ICollection<T> collection)
     {
@@ -112,13 +112,19 @@ public class Jenga<T> : ICollection<T>, ICloneable
     /// Instance constructor for the class
     /// </summary>
     /// <param name="other">
-    /// An instance of <see cref="Jenga{T}"/> from which current one will be constructed
+    /// An instance of <see cref="Jenga{T}"/> which from current one will be constructed
     /// </param>
     public Jenga(Jenga<T> other)
     {
         Controllers = other.Controllers;
     }
 
+    /// <summary>
+    /// Instance constructor for the class
+    /// </summary>
+    /// <param name="threadsafe">
+    /// An instance of <see cref="Threadsafe.Jenga{T}"/> which from current one will be constructed
+    /// </param>
     public Jenga(Threadsafe.Jenga<T> threadsafe)
     {
         Controllers = threadsafe.Controllers;
@@ -363,6 +369,15 @@ public class Jenga<T> : ICollection<T>, ICloneable
                                   arrayIndex);
     }
 
+    /// <summary>
+    /// Function which converts given instance of <see cref="Jenga{T}"/> into the threadsafe version <see cref="Threadsafe.Jenga{T}"/>
+    /// </summary>
+    /// <param name="instance">
+    /// An instance of <see cref="Jenga{T}"/> which from threadsafe version will be constructed
+    /// </param>
+    /// <returns>
+    /// An instance of <see cref="Threadsafe.Jenga{T}"/> which represents threadsafe version of <see cref="Jenga{T}"/>
+    /// </returns>
     public static Threadsafe.Jenga<T> Synchronized(Jenga<T> instance)
            => new Threadsafe.Jenga<T>(instance);
 
@@ -766,13 +781,19 @@ public class Jenga<TKey, TValue> : IDictionary<TKey, TValue>, ICloneable where T
     /// Instance constructor for the class
     /// </summary>
     /// <param name="other">
-    /// An instance of <see cref="Jenga{TKey, TValue}"/> from which current one will be constructed
+    /// An instance of <see cref="Jenga{TKey, TValue}"/> which from current one will be constructed
     /// </param>
     public Jenga(Jenga<TKey, TValue> other)
     {
         Controllers = other.Controllers;
     }
 
+    /// <summary>
+    /// Instance constructor for the class
+    /// </summary>
+    /// <param name="threadsafe">
+    /// An instance of <see cref="Threadsafe.Jenga{TKey, TValue}"/> which from current one will be constructed
+    /// </param>
     public Jenga(Threadsafe.Jenga<TKey, TValue> threadsafe)
     {
         Controllers = threadsafe.Controllers;
@@ -1062,6 +1083,15 @@ public class Jenga<TKey, TValue> : IDictionary<TKey, TValue>, ICloneable where T
 #pragma warning restore IDE0008
     }
 
+    /// <summary>
+    /// Function which converts given instance of <see cref="Jenga{TKey, TValue}"/> into the threadsafe version <see cref="Threadsafe.Jenga{TKey, TValue}"/>
+    /// </summary>
+    /// <param name="instance">
+    /// An instance of <see cref="Jenga{TKey, TValue}"/> which from threadsafe version will be constructed
+    /// </param>
+    /// <returns>
+    /// An instance of <see cref="Threadsafe.Jenga{TKey, TValue}"/> which represents threadsafe version of <see cref="Jenga{TKey, TValue}"/>
+    /// </returns>
     public static Threadsafe.Jenga<TKey, TValue> Synchronized(Jenga<TKey, TValue> instance)
            => new Threadsafe.Jenga<TKey, TValue>(instance);
 

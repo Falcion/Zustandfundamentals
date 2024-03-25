@@ -96,7 +96,7 @@ public class Pair<T> : IEquatable<Pair<T>>, IEqualityComparer<Pair<T>>,
     /// Instance constructor for the class
     /// </summary>
     /// <param name="other">
-    /// An instance of <see cref="Pair{T}"/> from which current one will be constructed
+    /// An instance of <see cref="Pair{T}"/> which from current one will be constructed
     /// </param>
     public Pair(Pair<T> other)
     {
@@ -391,7 +391,7 @@ public class Pair<T1, T2> : IEquatable<Pair<T1, T2>>, IEqualityComparer<Pair<T1,
     /// Instance constructor for the class
     /// </summary>
     /// <param name="other">
-    /// An instance of <see cref="Pair{T}"/> from which current one will be constructed
+    /// An instance of <see cref="Pair{T}"/> which from current one will be constructed
     /// </param>
     public Pair(Pair<T1, T2> other)
     {
