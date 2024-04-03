@@ -8,12 +8,12 @@
     <Title>Zustandf</Title>
     <Version>0.0.0-rc</Version>
     <Authors>Falcion</Authors>
-    <Description>TO-DO</Description>
+    <Description>.NET library, implementing an advanced custom data models-containers and custom jenga wrapper for array of data  </Description>
     <Copyright>MIT License</Copyright>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <RepositoryUrl>https://github.com/Falcion/Zustandfundamentalen</RepositoryUrl>
-    <PackageTags>TO-DO</PackageTags>
+    <PackageTags>data;csharp;dotnet;containers;dataset;dotnet-core;csharp-library</PackageTags>
     <IncludeSymbols>True</IncludeSymbols>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Configurations>Debug;Release</Configurations>
