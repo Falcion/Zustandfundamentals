@@ -1,0 +1,9 @@
+{
+    "id": "zustandfundamentalen",
+    "name": "Zustandf",
+    "description": ".NET library, implementing an advanced custom data models-containers and custom jenga wrapper for array of data",
+    "author": "Falcion",
+    "authorUrl": "https://github.com/Falcion/",
+    "license": "MIT",
+    "version": "0.1.0"
+}
