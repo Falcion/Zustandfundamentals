@@ -62,12 +62,14 @@ Before asking questions, read this block because here is all the primary informa
 
 ### Prerequisites
 
-For usage of this project just as template for your repository, there is no direct prerequisites besides [Node.js](https://dotnet.microsoft.com/en-us/download/).
-
-But, for contributing to this project, we highly recommending following those prerequisites:
+If you want to make a contribution to this project, these are following tech-requirements:
 
 - Installed [Node.js](https://dotnet.microsoft.com/en-us/download/) on your desktop on which you will edit/setup this project;
 - Installed [Python](https://www.python.org/) if you want to contribute to the scripts of this project (in terms of .PY scripts);
+
+
+For usage of this project, you must have on your machine already installed:
+
 - Any potentional IDE or text-editor with .NET native support (better if with support of NUGET), like [“Visual Studio”](https://visualstudio.microsoft.com/) and etc.;\
     https://visualstudio.microsoft.com/ \
     https://code.visualstudio.com/
