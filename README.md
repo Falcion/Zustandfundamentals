@@ -7,6 +7,7 @@
     <a href="https://github.com/Falcion/Zustandfundamentalen/forks"><img src="https://img.shields.io/github/forks/Falcion/Zustandfundamentalen" alt="forks"/></a>
     <a href="https://github.com/Falcion/Zustandfundamentalen/issues"><img src="https://img.shields.io/github/issues/Falcion/Zustandfundamentalen" alt="issues"/></a>
     <a href="https://github.com/Falcion/Zustandfundamentalen/commits"><img src="https://img.shields.io/github/last-commit/Falcion/Zustandfundamentalen" alt="commit-activity"/></a>
+    <a href="https://www.nuget.org/packages/Zustandf/"><img src="https://img.shields.io/nuget/dt/Zustandf" alt="downloads"/></a>
 </div>
 <!-- -->
 <br/>
