@@ -1,0 +1,78 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  release:
+    types:
+      - created
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.x.x
+        # Specify the desired version of .NET to use for the build.
+        # Modify the dotnet-version value according to your project's requirements.
+
+    - name: Restore dependencies of project
+      working-directory: ./source
+      run: dotnet restore
+      # Restores the dependencies required for the project.
+      # Make sure the working-directory points to the correct directory where the project is located.
+
+    - name: Build project with no restore
+      working-directory: ./source
+      run: dotnet build --no-restore
+      # Builds the project without restoring dependencies.
+      # Make sure the working-directory points to the correct directory where the project is located.
+
+    - name: CLI test for project
+      working-directory: ./source
+      run: dotnet test --no-build --verbosity normal
+      # Runs the tests for the project using the dotnet test command.
+      # Make sure the working-directory points to the correct directory where the project is located.
+
+  deploy:
+    needs: [ "build" ]
+    if: github.event_name == 'create'
+    runs-on: ubuntu-latest
+    
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
+      - run: dotnet build --configuration Release
+        # Builds the project with the Release configuration.
+      - name: Create the package
+        run: dotnet pack --configuration Release
+        working-directory: ./source
+        # Creates a NuGet package for the project using the dotnet pack command.
+        # Make sure the working-directory points to the correct directory where the project is located.
+      - name: Check NUGET_AUTH_TOKEN existence
+        run: |
+          if [ -z "${{ secrets.NUGET_AUTH_TOKEN }}" ]; then
+            echo "⚠️ WARNING: The NUGET_AUTH_TOKEN secret is not set in the repository secrets."
+          fi
+        # Checks if the NUGET_AUTH_TOKEN secret exists in the repository secrets.
+        # Displays a warning message in the workflow logs if the secret is not found.
+      - name: Publish the package to GPR
+        run: dotnet nuget push bin/Release/*.nupkg --api-key ${{ secrets.NUGET_AUTH_TOKEN }} --source https://api.nuget.org/v3/index.json
+        working-directory: ./source
+        # Publishes the created NuGet package to the NuGet package repository.
+        # Make sure the working-directory points to the correct directory where the project is located.
