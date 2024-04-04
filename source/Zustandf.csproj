@@ -6,7 +6,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <SignAssembly>False</SignAssembly>
     <Title>Zustandf</Title>
-    <Version>0.0.0-rc</Version>
+    <Version>0.1.1</Version>
     <Authors>Falcion</Authors>
     <Description>.NET library, implementing an advanced custom data models-containers and custom jenga wrapper for array of data  </Description>
     <Copyright>MIT License</Copyright>
