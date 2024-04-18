@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.1.2](https://github.com/mokkapps/changelog-generator-demo/compare/v0.1.2-r.0...v0.1.2) (2024-04-18)
 
+
+### Fix
+
+* **semantic:** fix semantic versioning ([490ef0f](https://github.com/mokkapps/changelog-generator-demo/commits/490ef0fd6738befc8621bbff353ddd9df4674f4b)))
+
 ### 0.1.1 (2024-04-04)
 
 
