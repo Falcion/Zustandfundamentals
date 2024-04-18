@@ -34,7 +34,9 @@ body:
       label: Version of an project's essence
       description: What version of an project's essence are you running.
       options:
-        - ...
+        - "0.1.2"
+        - "0.1.1"
+        - "0.1.1-r0"
       default: 0
     validations:
       required: true
@@ -47,6 +49,7 @@ body:
         - Windows
         - macOS
         - Linux
+        - Other
   - type: checkboxes
     id: terms
     attributes:
