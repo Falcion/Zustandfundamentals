@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/mokkapps/changelog-generator-demo/compare/v0.1.2...v0.1.3) (2024-04-22)
+
+
+### Build system
+
+* **build-env:** add auto-publishing workflow ([d8af8a2](https://github.com/mokkapps/changelog-generator-demo/commits/d8af8a2954c4409a2d680b2f5f94098c884431af))
+
 ### [0.1.2](https://github.com/mokkapps/changelog-generator-demo/compare/v0.1.2-r.0...v0.1.2) (2024-04-18)
 
 
