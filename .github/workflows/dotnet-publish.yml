@@ -31,7 +31,8 @@ jobs:
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
-
+    - run: dotnet build --configuration Release --output ${{ env.NuGetDirectory }}
+      working-directory: './source'
     - run: dotnet pack --configuration Release --output ${{ env.NuGetDirectory }}
       working-directory: './source'
 
