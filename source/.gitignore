@@ -9,3 +9,7 @@
 # Ignore Obsidian workspace file (local)
 .obsidian/workspace
 !.obsidian/app.json
+
+
+# Ignoring NuGet.org package output
+nuget/**/*
